@@ -1,16 +1,18 @@
-#Escriba un programa que calcule el promedio de 4 notas ingresadas por el usuario:
+#Escriba un programa que convierta de centímetros a pulgadas. Una pulgada es igual a 2.54 centímetros.
 
-#Primera nota: 55
-#Segunda nota: 71
-#Tercera nota: 46
-#Cuarta nota: 87
-#El promedio es: 64.75
+#Ingrese longitud: 45
+#45 cm = 17.7165 in
+#Ingrese longitud: 13
+#13 cm = 5.1181 in
 
-note1 = float(input("Enter the note value: "))
-note2 = float(input("Enter the note value: "))
-note3 = float(input("Enter the note value: "))
-note4 = float(input("Enter the note value: "))
+# Pedimos al usuario que ingrese la longitud en centímetros
+entrada = input("Ingrese longitud en centímetros: ")
 
-promedio = ((note1+note2+note3+note4)/4)
+# Convertimos la entrada a un número
+centimetros = float(entrada)
 
-print(f"""{promedio} """)
+# Calculamos las pulgadas (1 pulgada = 2.54 centímetros)
+pulgadas = centimetros / 2.54
+
+# Mostramos el resultado
+print(centimetros, "cm =", pulgadas, "in")
