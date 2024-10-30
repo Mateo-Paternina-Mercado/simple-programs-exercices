@@ -6,7 +6,7 @@
 #13 cm = 5.1181 in
 
 # Pedimos al usuario que ingrese la longitud en centímetros
-entrada = input("Ingrese longitud en centímetros: ")
+entrada = input("Enter length in centimeters: ")
 
 # Convertimos la entrada a un número
 centimetros = float(entrada)
