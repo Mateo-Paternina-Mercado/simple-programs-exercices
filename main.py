@@ -1,18 +1,15 @@
-#Escriba un programa que convierta de centímetros a pulgadas. Una pulgada es igual a 2.54 centímetros.
+#Escriba un programa que pida al usuario un entero de tres dígitos, y entregue el número con los dígitos en orden inverso:
 
-#Ingrese longitud: 45
-#45 cm = 17.7165 in
-#Ingrese longitud: 13
-#13 cm = 5.1181 in
+#Ingrese numero: 345
+#543
+#Ingrese numero: 241
+#142
 
-# Pedimos al usuario que ingrese la longitud en centímetros
-entrada = input("Enter length in centimeters: ")
+# Pedimos al usuario que ingrese un número de tres dígitos
+numero = input("Enter a three-digit number: ")
 
-# Convertimos la entrada a un número
-centimetros = float(entrada)
-
-# Calculamos las pulgadas (1 pulgada = 2.54 centímetros)
-pulgadas = centimetros / 2.54
+# Invertimos el número
+numero_invertido = numero[2] + numero[1] + numero[0]
 
 # Mostramos el resultado
-print(centimetros, "cm =", pulgadas, "in")
+print(numero_invertido)
