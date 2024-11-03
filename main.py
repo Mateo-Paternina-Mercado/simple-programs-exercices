@@ -1,40 +1,19 @@
-#Un alumno desea saber que nota necesita en el tercer certamen para aprobar un ramo.
+import math
+TO = float(input("Temperatura original del huevo\n")) #Temperatura original del huevo
+TW = 100 #Temperatura del agua para alcanzar la ebullición
+TY = 70 #Temperatura de la yema para coagularse 
+M = 67 #Masa del huevo 47 = pequeño y 67 grande
+P = 1.038 #Constante de la formula = densidad del huevo
+C = 3.7 #Constante de la formula = capacidad calorífica del huevo
+K = 5.4 * math.pow(10, -3) #Constante de la formula = conductividad térmica del huevo
+dividendo = math.pow(M, (2/3)) * (C * (math.pow(P, (1/3))))
+divisor = (K * math.pow(math.pi, 2)) * math.pow((4*math.pi) / 3, (2/3))
+resultado = dividendo / divisor
 
-#El promedio del ramo se calcula con la siguiente formula.
+resultado2 = math.log(0.76 * ((TO - TW) / (TY - TW)))
 
-#                                        NC=(C1+C2+C3)3
-#                                        NF=NC⋅0.7+NL⋅0.3
-#Donde NC
-# es el promedio de certámenes, NL
-# el promedio de laboratorio y NF
-# la nota final.
+segundos = resultado * resultado2
+#minutos = round(segundos/60)
 
-#Escriba un programa que pregunte al usuario las notas de los dos primeros certamen y la nota de laboratorio, y muestre la nota que necesita el alumno para aprobar el ramo con nota final 60.
-
-#Ingrese nota certamen 1: 45
-#Ingrese nota certamen 2: 55
-#Ingrese nota laboratorio: 65
-#Necesita nota 72 en el certamen 3
-
-
-def calcular_nota_necesaria():
-    # Solicitar las notas al usuario
-    certamen1 = float(input("Enter contest note 1: "))
-    certamen2 = float(input("Enter contest note 2: "))
-    nota_laboratorio = float(input("Enter laboratory note: "))
-    
-    # Definir la nota final mínima para aprobar
-    nota_final_deseada = 60
-    
-    # Calcular la nota necesaria en el promedio de certámenes
-    NF_laboratorio = nota_final_deseada - (nota_laboratorio * 0.3)
-    NC_necesario = NF_laboratorio / 0.7
-    
-    # Calcular la nota necesaria en el certamen 3
-    nota_certamen3_necesaria = (NC_necesario * 3) - certamen1 - certamen2
-    
-    # Mostrar el resultado
-    print(f"Need note {nota_certamen3_necesaria:.2f} in the contest 3")
-
-# Ejecutar el programa
-calcular_nota_necesaria()
+print(f"El tiempo máxima para prepararlo a la copa {segundos} segundos")
+#print(f"El tiempo máxima para prepararlo a la copa {minutos} minutos")
