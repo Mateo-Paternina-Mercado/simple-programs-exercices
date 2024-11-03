@@ -1,24 +1,23 @@
-#Escriba un programa que pregunte al usuario la hora actual t del reloj y un número entero de horas h, que indique qué hora marcará el reloj dentro de h horas:
+#Escriba un programa que entregue la parte decimal de un número real ingresado por el usuario.
 
-#Hora actual: 3
-#Cantidad de horas: 5
-#En 5 horas, el reloj marcara las 8
-#Hora actual: 11
-#Cantidad de horas: 43
-#En 43 horas, el reloj marcara las 6
+#Ingrese un numero: 4.5
+#0.5
+#Ingrese un numero: -1.19
+#0.19
 
-def calcular_nueva_hora():
-    # Solicitar la hora actual
-    hora_actual = int(input("Current time (0-23): "))
+def obtener_parte_decimal():
+    # Solicitar un número real al usuario
+    numero = float(input("Enter a number: "))
     
-    # Solicitar la cantidad de horas a sumar
-    horas_a_sumar = int(input("Number of hours: "))
+    # Obtener la parte entera
+    parte_entera = int(numero)
     
-    # Calcular la nueva hora
-    nueva_hora = (hora_actual + horas_a_sumar) % 24
+    # Calcular la parte decimal
+    parte_decimal = abs(numero - parte_entera)
     
-    # Mostrar el resultado
-    print(f"En {horas_a_sumar} hours, the clock will show {nueva_hora}.")
+    # Mostrar la parte decimal con dos decimales
+    print(f"{parte_decimal:.2f}")
 
 # Ejecutar el programa
-calcular_nueva_hora()
+obtener_parte_decimal()
+
